@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ultimate Game Stop</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="photos/logo.jpeg">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="">
+        
+        <!--section for navbar, used bootstrap navbar-->
+
+        <section id="top-section" class=""> 
+
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <img id="logo" src="photos/logo.jpeg" alt="logo"> 
+                <a class="navbar-brand" href="#">Ultimate Game Stop</a>
+              
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                  
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 catagory">
+                        <li class="nav-item active">
+                            <img id="console-logo" src="photos/console-logo.jpg" alt="colsole logo">
+                            <a class="nav-link" id="Console" href="#">Console<span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <img id="andriod-logo" src="photos/andriod-logo.png" alt="andriod logo">
+                            <a class="nav-link" id="andriod" href="#">Andriod</a>
+                        </li>
+
+                        <li class="nav-item">
+                                <img id="pc-logo" src="photos/pc-logo.png" alt="pc logo">
+                                <a class="nav-link" id="pc pc-text" href="#">PC</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <img id="apple-logo" src="photos/apple-logo.jpg" alt="apple logo">
+                            <a class="nav-link" id="apple-devices" href="#">Apple Devices</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="search-wrapper">
+                        <input type="search" placeholder="Seach Games, platform" id="search" data-search>
+                    </div>
+                  
+                  <img id="signin-logo"  class="float-right" src="photos/signin-logo.png" alt="signin-logo">
+
+                </div>
+
+            </nav>
+        
+        </section>
+
+        <section id="sub-catagory" class="sub-catagory-dark">
+
+            <!--section for subcatagory platform-->
+
+            <button class="sub-catagory-button button-17" role="button">PlayStation Vita</button>
+            <button class="sub-catagory-button button-17" role="button">PlayStation 3</button>
+            <button class="sub-catagory-button button-17" role="button">Macintosh</button>
+            <button class="sub-catagory-button button-17" role="button">Nintendo 3DS</button>
+            <button class="sub-catagory-button button-17" role="button">Nintendo DS</button>
+            <button class="sub-catagory-button button-17" role="button">Xbox 360</button>
+
+        </section>
+
+        <section id="main-content">
+
+            <div class="row">
+                <!-- <div class="column">
+                  <div class="card">
+                    <img src="img_avatar2.png" alt="Avatar" style="width:100%">
+                    <h3>Game Name 1</h3>
+                    <p>Some text</p>
+                  </div>
+                </div>
+              
+                <div class="column">
+                  <div class="card">
+                    <img src="img_avatar2.png" alt="Avatar" style="width:100%">
+                    <h3>Game Name 2</h3>
+                    <p>Some text</p>
+                  </div>
+                </div>
+                
+                <div class="column">
+                  <div class="card">
+                    <img src="img_avatar2.png" alt="Avatar" style="width:100%">
+                    <h3>Game Name 3</h3>
+                    <p>Some text</p>
+                  </div>
+                </div>
+                
+                <div class="column">
+                  <div class="card">
+                    <img src="img_avatar2.png" alt="Avatar" style="width:100%">
+                    <h3>Game Name 4</h3>
+                    <p>Some text</p>
+                  </div>
+                </div>
+              </div> -->
+                
+              
+              <div class="user-cards" data-user-cards-container></div>
+
+             
+              <!--template for game card  -->
+              <template data-user-template>
+                <div class="column">
+                <div class="card">
+                    <img src="img_avatar2.png" alt="Avatar" style="width:100%">
+                    <h6><div class="header" data-header></div></h6>
+                    <div class="body" data-body></div>
+                </div>
+                </div>
+              </template>
+
+              
+
+            
+            </div>
+
+            <!-- dark mode button -->
+              <button class="theme-toggle-button float-right theme-toggle-button-right-padding">
+                <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M7.5,2C5.71,3.15 4.5,5.18 4.5,7.5C4.5,9.82 5.71,11.85 7.53,13C4.46,13 2,10.54 2,7.5A5.5,5.5 0 0,1 7.5,2M19.07,3.5L20.5,4.93L4.93,20.5L3.5,19.07L19.07,3.5M12.89,5.93L11.41,5L9.97,6L10.39,4.3L9,3.24L10.75,3.12L11.33,1.47L12,3.1L13.73,3.13L12.38,4.26L12.89,5.93M9.59,9.54L8.43,8.81L7.31,9.59L7.65,8.27L6.56,7.44L7.92,7.35L8.37,6.06L8.88,7.33L10.24,7.36L9.19,8.23L9.59,9.54M19,13.5A5.5,5.5 0 0,1 13.5,19C12.28,19 11.15,18.6 10.24,17.93L17.93,10.24C18.6,11.15 19,12.28 19,13.5M14.6,20.08L17.37,18.93L17.13,22.28L14.6,20.08M18.93,17.38L20.08,14.61L22.28,17.15L18.93,17.38M20.08,12.42L18.94,9.64L22.28,9.88L20.08,12.42M9.63,18.93L12.4,20.08L9.87,22.27L9.63,18.93Z"/>
+                </svg>
+                </button>
+              <div class="sun-moon-container">
+                <svg class="sun" style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path d="M3.55,18.54L4.96,19.95L6.76,18.16L5.34,16.74M11,22.45C11.32,22.45 13,22.45 13,22.45V19.5H11M12,5.5A6,6 0 0,0 6,11.5A6,6 0 0,0 12,17.5A6,6 0 0,0 18,11.5C18,8.18 15.31,5.5 12,5.5M20,12.5H23V10.5H20M17.24,18.16L19.04,19.95L20.45,18.54L18.66,16.74M20.45,4.46L19.04,3.05L17.24,4.84L18.66,6.26M13,0.55H11V3.5H13M4,10.5H1V12.5H4M6.76,4.84L4.96,3.05L3.55,4.46L5.34,6.26L6.76,4.84Z" />
+                </svg>
+            
+                <svg class="moon" style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z" />
+                </svg>
+
+        </section>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="index.js" async defer></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- script for dark mode -->
+        <script>
+            const sunMoonContainer = document.querySelector('.sun-moon-container');
+        
+            document.querySelector('.theme-toggle-button').addEventListener('click', () => {
+            document.body.classList.toggle('dark')
+            const currentRotation = parseInt(getComputedStyle(sunMoonContainer).getPropertyValue('--rotation'))
+            sunMoonContainer.style.setProperty('--rotation', currentRotation + 180);
+            var subcatagory= document.getElementById("sub-catagory");
+            subcat.classList.toggle('sub-catagory-dark');
+            });
+            
+        </script>
+    
+    </body>
+
+</html>
